@@ -240,14 +240,12 @@ int main() {
           ptsy.push_back(next_wp2[1]);
 
           // rotate ptsx, ptsy
-          cout << timeIdx << "," << action  << "PTSx,y = ";
           for (int i = 0; i < ptsx.size(); i++){
             double shift_x = ptsx[i] - ref_x;
             double shift_y = ptsy[i] - ref_y;
             ptsx[i] = (shift_x*cos(0-ref_yaw) - shift_y*sin(0-ref_yaw));
             ptsy[i] = (shift_x*sin(0-ref_yaw) + shift_y*cos(0-ref_yaw));
           }
-          cout << endl;
           
           // ptsx,ptsy to next_val. using (pre_len) prev_path points + (50-pre_len) prev_
           tk::spline s;
@@ -280,10 +278,6 @@ int main() {
             next_y_vals.push_back(y_point);
           }
           
-          for(int i=0; i<next_x_vals.size(); i++){
-            cout << "XY = " << i << "\t" << next_x_vals[i] << "\t" << next_y_vals[i] << endl;
-          }
-
           msgJson["next_x"] = next_x_vals;
           msgJson["next_y"] = next_y_vals;
           auto vec_x = msgJson["next_x"];
