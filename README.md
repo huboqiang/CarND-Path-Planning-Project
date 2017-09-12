@@ -169,3 +169,11 @@ else if( (ego.state != "KL") and (car_speed < 40.0) and (car_speed > 25) and (eg
 
 - During my testing, a car in the right side of me suddenly ran into my lane and my car just hit it. If my car is a Tesla X, a _human take-over_ were required. The program need to improve to learn how to do in this condition.
 - The car did not performed well for vehicle-following. A PID controller for speed would be a good tool to get a proper distance with the car ahead.
+
+See the movie in youtube:
+
+[https://www.youtube.com/watch?v=IYaYrpi0L1M](https://www.youtube.com/watch?v=IYaYrpi0L1M)
+
+or 腾讯视频：
+
+[https://v.qq.com/x/page/i0549k0u8sq.html](https://v.qq.com/x/page/i0549k0u8sq.html)
